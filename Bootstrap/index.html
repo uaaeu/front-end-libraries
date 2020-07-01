@@ -129,10 +129,24 @@
             <label><input type="checkbox" name="personality" /> Crazy</label>
           </div>
         </div>
-        <!-- Style Text Inputs as Form Controls with 'form-control' -->
-        <input class="form-control" type="text" placeholder="cat photo URL" required />
-        <!-- Style Button and Add Icon -->
-        <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
+        <!-- Line up Form Elements Responsively with Bootstrap -->
+        <div class="row">
+          <!-- Style Text Inputs as Form Controls with 'form-control' -->
+          <div class="col-7">
+            <input
+              class="form-control"
+              type="text"
+              placeholder="cat photo URL"
+              required
+            />
+          </div>
+          <!-- Style Button and Add Icon -->
+          <div class="col-5">
+            <button class="btn btn-primary" type="submit">
+              <i class="fa fa-paper-plane"></i> Submit
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   </body>
