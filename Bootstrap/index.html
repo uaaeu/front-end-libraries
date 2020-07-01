@@ -21,7 +21,6 @@
       type="text/css"
     />
     <style>
-
       h2 {
         font-family: Lobster, Monospace;
       }
@@ -32,7 +31,6 @@
         border-style: solid;
         border-radius: 50%;
       }
-
     </style>
   </head>
   <body>
@@ -41,21 +39,27 @@
     <div class="container-fluid">
       <!-- Center Text with Bootstrap with 'text-center' class name -->
       <!-- Ditch Custom CSS for Bootstrap with 'tet-primary' -->
-      <h2 class="text-primary text-center">CatPhotoApp</h2>
-
-      <a href="#"
-        ><img
-          class="img-responsive thick-green-border"
-          src="https://bit.ly/fcc-relaxing-cat"
-          alt="A cute orange cat lying on its back."
-      /></a>
-      <!-- Make Images Mobile Responsive with class name 'img-responsive' -->
+      <!-- Create a Custom Heading -->
+      <div class="row">
+        <div class="col-8">
+          <h2 class="text-primary text-center">CatPhotoApp</h2>
+        </div>
+        <div class="col-4">
+          <a href="#"
+            ><img
+              class="img-fluid thick-green-border"
+              src="https://bit.ly/fcc-relaxing-cat"
+              alt="A cute orange cat lying on its back."
+          /></a>
+        </div>
+      </div>
+      <!-- Make Images Mobile Responsive with class name 'img-fluid' -->
       <img
-        class="img-responsive"
+        class="img-fluid"
         src="https://bit.ly/fcc-running-cats"
         alt="Three kittens running towards the camera."
       />
-      <!-- Create a Bootstrap Button with class name 'btn btn-default' -->
+      <!-- Create a Bootstrap Button with class name 'btn btn-secondary' -->
       <!-- Create a Block Element Bootstrap Button with 'btn-block' -->
       <!-- Taste the Bootstrap Button Color Rainbow with 'btn-primary' -->
       <!-- Use the Bootstrap Grid to Put Elements Side By Side with 'row' and 'col-4' -->
@@ -76,7 +80,7 @@
           </div>
         </div>
       </div>
-      <p>Things cats love:</p>
+      <p>Things cats <span class="text-danger">love:</span></p>
       <ul>
         <li>cat nip</li>
         <li>laser pointers</li>
