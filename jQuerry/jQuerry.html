@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <!-- Add Bootstrap Links -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Create a Bootstrap Headline -->
+    <!-- House our page within a Bootstrap container-fluid div -->
+    <div class="container-fluid">
+      <h3 class="text-primary text-center">jQuery Playground</h3>
+      <!-- Create a Bootstrap Row -->
+      <div class="row">
+        <!-- Split Bootstrap Row -->
+        <div class="col-6">
+          <!-- Label Bootstrap Cards -->
+          <h4>#left-card</h4>
+          <!-- Create Bootstrap Card -->
+          <div class="card" id="left-card">
+            <!-- Buttons Created -->
+            <!-- Apply the Default Bootstrap Button Style -->
+            <!-- Create a Class to Target with jQuery Selectors -->
+            <!-- Add id Attributes to Bootstrap Elements -->
+            <div class="row">
+              <div class="col-4">
+                <!-- Give Each Element a Unique id -->
+                <button class="btn btn-secondary target" id="target1">
+                  <!-- Label Bootstrap Buttons -->
+                  #target1
+                </button>
+              </div>
+              <div class="col-4">
+                <button class="btn btn-secondary target" id="target2">
+                  #target2
+                </button>
+              </div>
+              <div class="col-4">
+                <button class="btn btn-secondary target" id="target3">
+                  #target3
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <h4>#right-card</h4>
+          <div class="card" id="right-card">
+            <div class="row">
+              <div class="col-4">
+                <button class="btn btn-secondary target" id="target4">
+                  #target4
+                </button>
+              </div>
+              <div class="col-4">
+                <button class="btn btn-secondary target" id="target5">
+                  #target5
+                </button>
+              </div>
+              <div class="col-4">
+                <button class="btn btn-secondary target" id="target6">
+                  #target6
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
