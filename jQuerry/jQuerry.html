@@ -60,6 +60,9 @@
         // Clone an Element Using jQuery
         $("#target6").clone().appendTo("#left-card");
 
+        // Target the Parent of an Element Using jQuery
+        $("#left-row").parent().css("background-color", "red");
+
         /**
         // Target HTML Elements with Selectors Using jQuery
         **$("button").addClass("animated bounce");
@@ -88,7 +91,7 @@
             <!-- Apply the Default Bootstrap Button Style -->
             <!-- Create a Class to Target with jQuery Selectors -->
             <!-- Add id Attributes to Bootstrap Elements -->
-            <div class="row">
+            <div class="row" id="left-row">
               <div class="col-4">
                 <!-- Give Each Element a Unique id -->
                 <button class="btn btn-secondary target" id="target1">
@@ -112,7 +115,7 @@
         <div class="col-6">
           <h4>#right-card</h4>
           <div class="card" id="right-card">
-            <div class="row">
+            <div class="row" id="rigth-row">
               <div class="col-4">
                 <button class="btn btn-secondary target" id="target4">
                   #target4
