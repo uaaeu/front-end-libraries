@@ -1,5 +1,6 @@
 //Store Data with Sass Variables
 $text-color: red;
+$small: 15px;
 
 // Create Reusable CSS with Mixins
 @mixin border-radius($radius) {
@@ -22,6 +23,13 @@ $text-color: red;
   }
 }
 
+//Use @for to Create a Sass Loop
+@for $i from 1 to 6 {
+  .text-#{$i} {
+    font-size: 15px * $i;
+  }
+}
+
 // Nest CSS with Sass
 .header {
   text-align: $text-color;
@@ -29,6 +37,7 @@ $text-color: red;
 .blog-post {
   h2 {
     color: $text-color;
+    font-size: $small;
   }
 }
 
