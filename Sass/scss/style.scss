@@ -5,8 +5,21 @@ $text-color: red;
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
-  -ms-morder-radius: $radius;
+  -ms-border-radius: $radius;
   border-radius: $radius;
+}
+
+// Use @if and @else to Add Logic To Your Styles
+@mixin border-stroke($val) {
+  @if $val == light {
+    border: 1px solid black;
+  } @else if $val == medium {
+    border: 3px solid black;
+  } @else if $val == heavy {
+    border: 6px solid black;
+  } @else {
+    border: none;
+  }
 }
 
 // Nest CSS with Sass
@@ -25,4 +38,5 @@ $text-color: red;
   background-color: green;
   // Use Mixins with @include
   @include border-radius(5px);
+  @include border-stroke(medium);
 }
