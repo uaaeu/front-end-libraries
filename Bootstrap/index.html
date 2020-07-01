@@ -21,17 +21,9 @@
       type="text/css"
     />
     <style>
-      .red-text {
-        color: red;
-      }
 
       h2 {
         font-family: Lobster, Monospace;
-      }
-
-      p {
-        font-size: 16px;
-        font-family: Monospace;
       }
 
       .thick-green-border {
@@ -41,9 +33,6 @@
         border-radius: 50%;
       }
 
-      .smaller-image {
-        width: 100px;
-      }
     </style>
   </head>
   <body>
@@ -51,13 +40,12 @@
     <!-- With adding class name 'container-fluid' -->
     <div class="container-fluid">
       <!-- Center Text with Bootstrap with 'text-center' class name -->
-      <h2 class="red-text text-center">CatPhotoApp</h2>
-
-      <p>Click here for <a href="#">cat photos</a>.</p>
+      <!-- Ditch Custom CSS for Bootstrap with 'tet-primary' -->
+      <h2 class="text-primary text-center">CatPhotoApp</h2>
 
       <a href="#"
         ><img
-          class="smaller-image thick-green-border"
+          class="img-responsive thick-green-border"
           src="https://bit.ly/fcc-relaxing-cat"
           alt="A cute orange cat lying on its back."
       /></a>
