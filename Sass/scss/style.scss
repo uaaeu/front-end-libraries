@@ -1,6 +1,14 @@
 //Store Data with Sass Variables
 $text-color: red;
 
+// Create Reusable CSS with Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-morder-radius: $radius;
+  border-radius: $radius;
+}
+
 // Nest CSS with Sass
 .header {
   text-align: $text-color;
@@ -9,4 +17,12 @@ $text-color: red;
   h2 {
     color: $text-color;
   }
+}
+
+.blog-post {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  // Use Mixins with @include
+  @include border-radius(5px);
 }
