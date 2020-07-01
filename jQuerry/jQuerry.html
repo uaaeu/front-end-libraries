@@ -34,13 +34,20 @@
     <!-- Script Tags and Document Ready -->
     <script>
       $(document).ready(function () {
+        //Target the Same Element with Multiple jQuery Selectors
+        $("button").addClass("animated");
+        $(".btn").addClass("shakeX");
+        $("#target1").addClass("btn-primary");
+
+        /**
         // Target HTML Elements with Selectors Using jQuery
-        $("button").addClass("animated bounce");
+        **$("button").addClass("animated bounce");
         // Target Elements by Class Using jQuery
-        $(".card").addClass("animated shakeX");
+        **$(".card").addClass("animated shakeX");
         // Target Elements by id Using jQuery
-        $("#target3").addClass("animated fadeOut");
-        $("#target6").addClass("animated fadeOut");
+        **$("#target3").addClass("animated fadeOut");
+        **$("#target6").addClass("animated fadeOut");
+        */
       });
     </script>
 
@@ -63,7 +70,7 @@
             <div class="row">
               <div class="col-4">
                 <!-- Give Each Element a Unique id -->
-                <button class="btn btn-secondary target" id="target1">
+                <button class="btn btn-default target" id="target1">
                   <!-- Label Bootstrap Buttons -->
                   #target1
                 </button>
