@@ -1,0 +1,13 @@
+//Store Data with Sass Variables
+$text-color: red;
+
+//Nest CSS with Sass
+.header {
+  text-align: $text-color;
+  .blog-post {
+    color: $text-color;
+    h2 {
+      color: $text-color;
+    }
+  }
+}
