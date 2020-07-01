@@ -18,19 +18,34 @@
   font-size: 75px;
 }
 
+.blue-bg {
+  background-color: blue;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.red-bg {
+  background-color: red;
+}
+
 .header {
-  text-align: red;
+  text-align: white;
 }
 
 .blog-post h2 {
-  color: red;
+  color: white;
   font-size: 15px;
+}
+
+.blog-post p {
+  color: orange;
 }
 
 .blog-post {
   width: 150px;
   height: 150px;
-  background-color: green;
   border-radius: 5px;
   border: 3px solid black;
 }

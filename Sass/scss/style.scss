@@ -1,6 +1,7 @@
 //Store Data with Sass Variables
-$text-color: red;
+$text-color: white;
 $small: 15px;
+$font-color: orange;
 
 // Create Reusable CSS with Mixins
 @mixin border-radius($radius) {
@@ -30,6 +31,13 @@ $small: 15px;
   }
 }
 
+// Use @each to Map Over Items in a List
+$colors: (color1: blue, color2: black, color3: red);
+
+@each $key, $color in $colors {
+  .#{$color}-bg {background-color: $color;}
+}
+
 // Nest CSS with Sass
 .header {
   text-align: $text-color;
@@ -39,12 +47,15 @@ $small: 15px;
     color: $text-color;
     font-size: $small;
   }
+  p {
+      color: $font-color;
+  }
 }
 
 .blog-post {
   width: 150px;
   height: 150px;
-  background-color: green;
+  ////background-color: green;
   // Use Mixins with @include
   @include border-radius(5px);
   @include border-stroke(medium);
