@@ -61,7 +61,7 @@
         $("#target6").clone().appendTo("#left-card");
 
         // Target the Parent of an Element Using jQuery
-        $("#left-row").parent().css("background-color", "red");
+        $("#target1").parent().css("background-color", "red");
 
         /**
         // Target HTML Elements with Selectors Using jQuery
@@ -91,47 +91,36 @@
             <!-- Apply the Default Bootstrap Button Style -->
             <!-- Create a Class to Target with jQuery Selectors -->
             <!-- Add id Attributes to Bootstrap Elements -->
-            <div class="row" id="left-row">
-              <div class="col-4">
-                <!-- Give Each Element a Unique id -->
-                <button class="btn btn-secondary target" id="target1">
-                  <!-- Label Bootstrap Buttons -->
-                  #target1
-                </button>
-              </div>
-              <div class="col-4">
-                <button class="btn btn-secondary target" id="target2">
-                  #target2
-                </button>
-              </div>
-              <div class="col-4">
-                <button class="btn btn-secondary target" id="target3">
-                  #target3
-                </button>
-              </div>
-            </div>
+
+            <!-- Give Each Element a Unique id -->
+            <button class="btn btn-secondary target" id="target1">
+              <!-- Label Bootstrap Buttons -->
+              #target1
+            </button>
+
+            <button class="btn btn-secondary target" id="target2">
+              #target2
+            </button>
+
+            <button class="btn btn-secondary target" id="target3">
+              #target3
+            </button>
           </div>
         </div>
         <div class="col-6">
           <h4>#right-card</h4>
           <div class="card" id="right-card">
-            <div class="row" id="rigth-row">
-              <div class="col-4">
-                <button class="btn btn-secondary target" id="target4">
-                  #target4
-                </button>
-              </div>
-              <div class="col-4">
-                <button class="btn btn-secondary target" id="target5">
-                  #target5
-                </button>
-              </div>
-              <div class="col-4">
-                <button class="btn btn-secondary target" id="target6">
-                  #target6
-                </button>
-              </div>
-            </div>
+            <button class="btn btn-secondary target" id="target4">
+              #target4
+            </button>
+
+            <button class="btn btn-secondary target" id="target5">
+              #target5
+            </button>
+
+            <button class="btn btn-secondary target" id="target6">
+              #target6
+            </button>
           </div>
         </div>
       </div>
