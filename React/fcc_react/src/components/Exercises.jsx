@@ -6,7 +6,7 @@ const FooterComp = (props) => {
   return (
     <div>
       <h4>Because you awaken...</h4>
-      <p>...from the biggest dream ever! <hr /> {props.date} </p>
+      <p>...from the biggest dreamen! <hr /> {props.date} </p>
     </div>
   );
 };
@@ -33,7 +33,7 @@ export class Exercises extends Component {
     return (
       // Define an HTML Class in JSX
       <div className="HeaderComp">
-        <h1>Morning Sunshine</h1>
+        <h1>Morning Glory</h1>
         <BodyComp />
         <FooterComp date="November 16 1938"/>
       </div>
