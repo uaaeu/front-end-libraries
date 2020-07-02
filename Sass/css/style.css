@@ -30,6 +30,18 @@
   background-color: red;
 }
 
+.par-1 {
+  font-size: 7px;
+}
+
+.par-2 {
+  font-size: 14px;
+}
+
+.par-3 {
+  font-size: 21px;
+}
+
 .header {
   text-align: white;
 }
