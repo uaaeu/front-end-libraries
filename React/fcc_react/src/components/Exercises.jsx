@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 // Component with Composition
 // Stateless Functional Component
-const FooterComp = () => {
+const FooterComp = (props) => {
   return (
     <div>
       <h4>Because you awaken...</h4>
-      <p>...from the biggest dream ever!</p>
+      <p>...from the biggest dream ever! <hr /> {props.date} </p>
     </div>
   );
 };
@@ -17,9 +17,9 @@ const BodyComp = () => {
     <div>
       <p>From orange sunshine to dark color revel</p>
       <ul>
-        <li>Psilocybin</li>
-        <li>Ergotamine</li>
-        <li>Mimosa Hostilis</li>
+        <li>Psilocyssss</li>
+        <li>Ergotaminesd25</li>
+        <li>Mimosa Hou Houst</li>
       </ul>
       <h3>Night night dear everything...</h3>
       <hr /> {/* Self-Closing JSX Tags */}
@@ -35,7 +35,7 @@ export class Exercises extends Component {
       <div className="HeaderComp">
         <h1>Morning Sunshine</h1>
         <BodyComp />
-        <FooterComp />
+        <FooterComp date="November 16 1938"/>
       </div>
     );
   }
