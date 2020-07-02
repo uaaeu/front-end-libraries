@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 
+// React Component
 export class Exercises extends Component {
   render() {
-    const MyComponent = () => { {/* Stateless Functional Component */}
+    // Stateless Functional Component
+    const MyComponent = () => {
       return <div>Because you awaken...</div>;
     };
     return (
       <div className="myDiv">
-        {" "}
         {/* Define an HTML Class in JSX */}
         <h1>Morning Sunshine</h1>
         <p>From orange sunshine to dark color revel</p>
