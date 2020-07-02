@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export class Exercises extends Component {
   render() {
     return (
-      <div className="myDiv">
+      <div className="myDiv"> {/* Define an HTML Class in JSX */}
         <h1>Morning Sunshine</h1>
         <p>From orange sunshine to dark color revel</p>
         <ul>
@@ -12,6 +12,7 @@ export class Exercises extends Component {
           <li>Mimosa Hostilis</li>
         </ul>
         <h3>Night night dear everything...</h3>
+        <hr />{/* Self-Closing JSX Tags */}
       </div>
     );
   }
