@@ -42,8 +42,9 @@
   font-size: 21px;
 }
 
-.header {
+.header, .for-loop {
   text-align: white;
+  color: darkblue;
 }
 
 .blog-post h2 {

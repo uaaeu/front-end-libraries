@@ -1,12 +1,13 @@
 //Main SCSS File
-@import 'variables';
-@import 'mixins';
-@import 'loops';
+@import "variables";
+@import "mixins";
+@import "loops";
 
 // Nest CSS with Sass
 
 .header {
   text-align: $text-color;
+  color: $headliner-color;
 }
 
 .blog-post {
@@ -15,7 +16,7 @@
     font-size: $small;
   }
   p {
-      color: $font-color;
+    color: $font-color;
   }
 }
 
@@ -26,4 +27,9 @@
   // Use Mixins with @include
   @include border-radius(5px);
   @include border-stroke(medium);
+}
+
+// Extend One Set of CSS Styles to Another Element
+.for-loop {
+  @extend .header;
 }
