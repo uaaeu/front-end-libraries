@@ -1,0 +1,29 @@
+//Main SCSS File
+@import 'variables';
+@import 'mixins';
+@import 'loops';
+
+// Nest CSS with Sass
+
+.header {
+  text-align: $text-color;
+}
+
+.blog-post {
+  h2 {
+    color: $text-color;
+    font-size: $small;
+  }
+  p {
+      color: $font-color;
+  }
+}
+
+.blog-post {
+  width: 150px;
+  height: 150px;
+  ////background-color: green;
+  // Use Mixins with @include
+  @include border-radius(5px);
+  @include border-stroke(medium);
+}

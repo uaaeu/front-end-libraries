@@ -1,0 +1,23 @@
+//Loops
+
+//Use @for to Create a Sass Loop
+@for $i from 1 to 6 {
+    .text-#{$i} {
+      font-size: 15px * $i;
+    }
+  }
+  
+  // Use @each to Map Over Items in a List
+  $colors: (color1: blue, color2: black, color3: red);
+  
+  @each $key, $color in $colors {
+    .#{$color}-bg {background-color: $color;}
+  }
+  
+  // Apply a Style Until a Condition is Met with @while
+  $x: 1;
+  @while $x < 4 {
+    .par-#{$x} { font-size: 7px * $x; }
+    $x: $x + 1;
+  }
+  
