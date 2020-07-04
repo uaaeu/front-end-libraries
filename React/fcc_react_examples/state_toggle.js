@@ -10,7 +10,7 @@ class MyComponent extends React.Component {
   // Create toggleVisibility function and use state to toggle visibility element and change it
   toggleVisibility() {
     this.setState((state) => ({
-      visibility: !state.visibility,
+      visibility: !state.visibility
     }));
   }
   render() {
