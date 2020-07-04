@@ -18,12 +18,13 @@ const BodyComp = () => {
   return (
     <div>
       <p>From orange sunshine to dark color revel</p>
+      {/* Inline styles added */}
       <ul>
-        <li>Psilocyssss</li>
-        <li>Ergotaminesd25</li>
-        <li>Mimosa Hou Houst</li>
+        <li style={{color: "pink"}}>Psilocyssss</li>
+        <li style={{color: "purple"}}>Ergotaminesd25</li>
+        <li style={{color: "darkviolet"}}>Mimosa Hou Houst</li>
       </ul>
-      <h3>Night night dear everything...</h3>
+      <h3 style={{color: "black"}}>Night night dear everything...</h3>
       <hr /> {/* Self-Closing JSX Tags */}
     </div>
   );
