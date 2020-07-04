@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Counter from './Counter'
 
 // Component with Composition
 // Stateless Functional Component
@@ -55,6 +56,7 @@ export class Exercises extends Component {
         {/* Create a button with onClick handler to change button name while clicked */}
         <p>made</p>
         <button onClick={this.handleClick}>{this.state.bicycleDay}</button>
+        <Counter />
       </div>
     );
   }
