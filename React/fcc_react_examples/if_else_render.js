@@ -13,17 +13,27 @@ class MyComponent extends React.Component {
   }
   render() {
     // if statement to check state boolean
-    if (this.state.display)
+    if (this.state.display) {
       return (
         <div>
           <button onClick={this.toggleDisplay}>Toggle Display</button>
           <h1>Displayed!</h1>
         </div>
       );
-    return (
-      <div>
-        <button onClick={this.toggleDisplay}>Toggle Display</button>
-      </div>
-    );
+    } else {
+      return (
+        <div>
+          <button onClick={this.toggleDisplay}>Toggle Display</button>
+        </div>
+      );
+    }
   }
 }
+
+// or we can use && instead of if/else
+return (
+  <div>
+    <button onClick={this.toggleDisplay}>Toggle Display</button>
+    {this.state.display && <h1>Displayed!</h1>}
+  </div>
+);
