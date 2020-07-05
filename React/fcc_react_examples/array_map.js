@@ -26,7 +26,8 @@ class MyToDoList extends React.Component {
     });
   }
   render() {
-    const items = this.state.toDoList.map((x) => <li>{x}</li>);
+    // Give Sibling Elements a Unique Key Attribute
+    const items = this.state.toDoList.map((x) => <li key={x+'#'}>{x}</li>);
     return (
       <div>
         <textarea
