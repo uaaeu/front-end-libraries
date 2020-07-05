@@ -27,7 +27,7 @@ export class MyForm extends React.Component {
       <div>
         <h1>{this.state.submit}</h1>
         <form onSubmit={this.handleSubmit}>
-          <input value={this.state.input} onChange={this.handleChange} />
+          <input value={this.state.input} onChange={this.handleChange} placeholder="enter a note..." />
           <button type="submit">Add Note</button>
         </form>
       </div>
