@@ -90,10 +90,9 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
       const latestMoveSquare = step.latestMoveSquare;
-      console.log(latestMoveSquare)
       const col = 1 + latestMoveSquare % 3;
       const row = 1 + Math.floor(latestMoveSquare / 3);
-      const desc = move ? "Go to move #" + move + ' - Location: ' + col + ', ' + row : "Go to game start";
+      const desc = move ? "Go to move #" + move + ' - ' + col + ',' + row : "Go to game start";
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
