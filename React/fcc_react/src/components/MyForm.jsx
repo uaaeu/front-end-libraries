@@ -7,10 +7,11 @@ export class MyForm extends React.Component {
       input: "",
       submit: "",
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
+  // Add arrow function instead of bind method
+  handleChange = (event) => {
     this.setState({
       input: event.target.value,
     });
@@ -26,7 +27,8 @@ export class MyForm extends React.Component {
     return (
       <div>
         <h1>{this.state.submit}</h1>
-        <form onSubmit={this.handleSubmit}>
+        {/* Add arrow function instead of bind method */}
+        <form onSubmit={(event) => this.handleSubmit(event)}>
           <input value={this.state.input} onChange={this.handleChange} placeholder="enter a note..." />
           <button type="submit">Add Note</button>
         </form>
