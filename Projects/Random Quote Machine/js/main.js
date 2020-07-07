@@ -1,22 +1,24 @@
+const projectName = "random-quote-machine";
+localStorage.setItem("example_project", "Random Quote Machine");
+let quotesData;
 
+const inFrame = () => {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
+};
 
-
-// const projectName = "random-quote-machine";
-// localStorage.setItem('example_project', 'Randowm Quote Machine');
-// let quotesData;
-
+const colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', '#472E32', '#BDBB99', '#77B1A9', '#73A857']
+let currentQuote = '', currentAuthor = '';
+const openURL = (url) => {
+    window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1, location=0, statusbar=0, menubar=0, resizable=0');
+}
 // /*
 //   Code by Gabriel Nunes
 //   Modified by Todd Chaffee to use Camper gist for JSON Quote data.
 // */
-
-// function inIframe () { try { return window.self !== window.top; } catch (e) { return true; } }
-
-// var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
-// var currentQuote = '', currentAuthor = '';
-// function openURL(url){
-//   window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
-// }
 
 // function getQuotes() {
 //   return $.ajax({
@@ -41,7 +43,7 @@
 // function getQuote() {
 
 //   let randomQuote = getRandomQuote();
-  
+
 //   currentQuote = randomQuote.quote;
 //   currentAuthor = randomQuote.author;
 
@@ -51,7 +53,7 @@
 
 //     $('#tumblr-quote').attr('href', 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote)+'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
 //   }
-  
+
 //   $(".quote-text").animate(
 //     { opacity: 0 },
 //     500,
