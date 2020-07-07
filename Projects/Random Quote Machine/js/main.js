@@ -2,7 +2,7 @@ const projectName = "random-quote-machine";
 localStorage.setItem("example_project", "Random Quote Machine");
 let quotesData;
 
-const inFrame = () => {
+const inIFrame = () => {
   try {
     return window.self !== window.top;
   } catch (e) {
@@ -52,23 +52,26 @@ const getQuotes = () => {
 };
 
 const getRandomQuote = () => {
-    return quotesData.quotes[Math.floor(Math.random() * quotesData.quotes.length)];
-}
+  return quotesData.quotes[
+    Math.floor(Math.random() * quotesData.quotes.length)
+  ];
+};
 
 const getQuote = () => {
-    
-    let randomQuote = getRandomQuote();
+  let randomQuote = getRandomQuote();
 
-    currentQuote = randomQuote.quote;
-    currentAuthor = randomQuote.author;
+  currentQuote = randomQuote.quote;
+  currentAuthor = randomQuote.author;
+};
+
+if (inIFrame()) {
+  $("#tweet-quote").attr(
+    "href",
+    "https://twitter.com/intent/tweet?hashtags=quotes&text=" +
+      encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
+  );
 }
 
-//   if(inIframe())
-//   {
-//     $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
-
-//     $('#tumblr-quote').attr('href', 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote)+'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
-//   }
 
 //   $(".quote-text").animate(
 //     { opacity: 0 },
