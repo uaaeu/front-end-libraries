@@ -58,3 +58,7 @@ ul {
 .list-order {
   margin: 8px 0;
 }
+
+.square.highlight {
+  background: #ddd;
+}
