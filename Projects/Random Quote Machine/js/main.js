@@ -62,50 +62,42 @@ const getQuote = () => {
 
   currentQuote = randomQuote.quote;
   currentAuthor = randomQuote.author;
+
+  if (inIFrame()) {
+    $("#tweet-quote").attr(
+      "href",
+      "https://twitter.com/intent/tweet?hashtags=quotes&text=" +
+        encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
+    );
+  }
+
+  $(".quote-text").animate({ opacity: 0 }, 500, function () {
+    $(this).animate({ opacity: 1 }, 500);
+    $("#text").text(randomQuote.quote);
+  });
+
+  $(".quote-author").animate({ opacity: 0 }, 500, function () {
+    $(this).animate({ opacity: 1 }, 500);
+    $("#author").html(randomQuote.author);
+  });
+
+  const color = Math.floor(Math.random() * colors.length);
+  $("html body").animate(
+    {
+      backgroundColor: colors[color],
+      color: colors[color],
+    },
+    1000
+  );
+  $(".button").animate(
+    {
+      backgroundColor: colors[color],
+    },
+    1000
+  );
 };
 
-if (inIFrame()) {
-  $("#tweet-quote").attr(
-    "href",
-    "https://twitter.com/intent/tweet?hashtags=quotes&text=" +
-      encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
-  );
-}
 
-
-//   $(".quote-text").animate(
-//     { opacity: 0 },
-//     500,
-//     function() {
-//       $(this).animate({ opacity: 1}, 500);
-//       $('#text').text(randomQuote.quote);
-//     }
-//   );
-
-//   $(".quote-author").animate(
-//     { opacity: 0 },
-//     500,
-//     function() {
-//       $(this).animate({ opacity: 1}, 500);
-//       $('#author').html(randomQuote.author);
-//     }
-//   );
-
-//   var color = Math.floor(Math.random() * colors.length);
-//   $("html body").animate(
-//     {
-//       backgroundColor: colors[color],
-//       color: colors[color]
-//     },
-//     1000
-//   );
-//   $(".button").animate(
-//     {
-//       backgroundColor: colors[color]
-//     },
-//     1000
-//   );
-// }
 
 // $(document).ready(function() {
 //   getQuotes().then(() => {
