@@ -51,10 +51,10 @@ const getQuotes = () => {
   });
 };
 
+const getRandomQuote = () => {
+    return quotesData.quotes[Math.floor(Math.random() * quotesData.quotes.length)];
+}
 
-// function getRandomQuote() {
-//   return quotesData.quotes[Math.floor(Math.random() * quotesData.quotes.length)];
-// }
 
 // function getQuote() {
 
