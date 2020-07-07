@@ -55,13 +55,13 @@ const getRandomQuote = () => {
     return quotesData.quotes[Math.floor(Math.random() * quotesData.quotes.length)];
 }
 
+const getQuote = () => {
+    
+    let randomQuote = getRandomQuote();
 
-// function getQuote() {
-
-//   let randomQuote = getRandomQuote();
-
-//   currentQuote = randomQuote.quote;
-//   currentAuthor = randomQuote.author;
+    currentQuote = randomQuote.quote;
+    currentAuthor = randomQuote.author;
+}
 
 //   if(inIframe())
 //   {
